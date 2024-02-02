@@ -12,7 +12,7 @@ public class UniqueChars {
      */
     public static String uniqueChars(String s) {
         String newS = "";
-		for(int i = 0; i < s.length() - 1; i++){
+		for(int i = 0; i < s.length(); i++){
 			char check = s.charAt((i));
 				if(s.indexOf(check) == i || check == ' '){
 					newS += check;
