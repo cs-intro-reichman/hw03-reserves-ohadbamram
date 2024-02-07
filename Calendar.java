@@ -3,6 +3,7 @@ public class Calendar {
 	static int dayOfMonth = 1;   
 	static int month = 1;
 	static int year = 1900;
+	static int dayOfWeek = 2;
 	static int nDaysInMonth = 31; // Number of days in January
 	
 	/** 
@@ -26,7 +27,11 @@ public class Calendar {
 	 		}
         }
 	 	while ((year == calendar) && (month <=12)) {
-	 		System.out.println(dayOfMonth + "/" + month + "/" + year); 		
+			if((dayOfWeek == 1) && (dayOfMonth == 1)){
+			System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");
+			}else{
+	 		System.out.println(dayOfMonth + "/" + month + "/" + year);
+			}			
 	 		advance();
 	 		debugDaysCounter++;
 	 		//// If you want to stop the loop after n days, replace the condition of the
@@ -50,6 +55,10 @@ public class Calendar {
 			month++;
 		 }
 		dayOfMonth++;
+		if(dayOfWeek == 7){
+			dayOfWeek = 0;
+		}
+		dayOfWeek++;
 	 } 
 		 
     // Returns true if the given year is a leap year, false otherwise.
