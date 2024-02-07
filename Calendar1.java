@@ -25,8 +25,9 @@ public class Calendar1 {
 			if((dayOfWeek == 1) && (dayOfMonth == 1)){
 			System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");
 			double1Counter++;
-			}
-	 		System.out.println(dayOfMonth + "/" + month + "/" + year); 		
+			}else{
+	 		System.out.println(dayOfMonth + "/" + month + "/" + year);
+			}			
 	 		advance();
 	 		debugDaysCounter++;
 	 		//// If you want to stop the loop after n days, replace the condition of the
